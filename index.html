@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renco</title>
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+
+
+    <!-- todo-- for models -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="mainapp">
+
+
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="headerlogo1">Rent<span class="headerlogo2">co</span></a>
+                <ul class="nav-menu">
+                    <li class="nav-item"> <a href="index.html" class="nav-link">Home</a> </li>
+                    <li class="nav-item"> <a href="about.html" class="nav-link">About</a> </li>
+                    <li class="nav-item"> <a href="about.html" class="nav-link">Price</a> </li>
+                    <li class="nav-item"> <a href="about.html" class="nav-link">Gallery</a> </li>
+                    <li class="nav-item"> <a href="about.html" class="nav-link">Contact</a> </li>
+                </ul>
+                <div class="headerbutton">
+                    <button class="menuButton" id="menuButton" onclick="headerMenuButtonOnClick()"><img
+                            src="./images/menuButton.svg" alt="" class="menuButton"></button>
+                    <i class="bi bi-search" id="headersearch" onclick="search()" style="font-size: 2.3rem;"></i>
+                    <button type="button" class="btn btn-primary register" id="register" style="font-size: 1.4rem;"
+                    data-toggle="modal" data-target="#exampleModalCenter">Register</button>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+
+        <!-- *section 2 of the page -->
+        <section class="section2">
+            <div class="section2Left">
+                <div class="section2heading">
+                    <p class="s2h1">Now</p>
+                    <p class="s2h2">It's Easy for you rent a car</p>
+                    <p class="s2h3">Sign Up in Seconds, Easy payment and Make Trip Available.
+                    </p>
+
+                </div>
+                <ul class="s2extra">
+                    <span> <i class="bi bi-play-circle-fill" style="font-size: 7rem; color: var(--orange);"></i></span>
+                    <span><i class="bi bi-activity" style="font-size: 7rem; color: var(--lightblack);"></i></span>
+                    <span>
+                        <p class="s2extratext">How to search and trip</p>
+                    </span>
+                </ul>
+            </div>
+            <div class="section2right">
+                <div class="s2image">
+                    
+                    <img src="./images/Car Png.png" alt="" class="s2carimage">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 
+ section 3 of the page
+ -->
+
+
+        <section class="section3">
+            <p class="s3h1">Make your trip</p>
+            <p class="s3h2">Fill in your travel details</p>
+            <div class="s3boxes">
+                <form>
+                    <div class="rows">
+                        <div class="COL8">
+                            <label>Where you from</label><br>
+                            <input class="s3form" type="text" id="pickup" name="pickup" placeholder="Pickup location">
+                        </div>
+                        <div class="COL8">
+                            <label>Where you go</label><br>
+                            <input class="s3form" type="text" name="destination" id="destination"
+                                placeholder="Destination City">
+                        </div>
+                        <div class="COL8">
+                            <label>Journey Date</label><br>
+                            <input class="s3form" type="date" onchange="change1(event)" id="jDate" name="journeydate">
+                        </div>
+                        <div class="COL8">
+                            <label>Return Date</label><br>
+                            <input class="s3form" type="date" onchange="change2(event)" id="rDate" name="returndate">
+                        </div>
+                        <div class="COL8">
+                            <button type="button" id="submitgo" class="submitgo" onclick="savedata()">Search
+                                Vehicle</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+
+        <!-- **
+            todo--section 4 of the page -->
+
+        <section class="section4">
+
+            <div class="section4up">
+                <h2 class="s4uph1">Three Simple Steps</h2>
+                <h4 class="s4uph2">Sign Up in Seconds, Easy payment and Make Trip Available.</h4>
+
+            </div>
+
+            <div class="section4down">
+                <!-- <ul> -->
+
+
+                <div class="card">
+                    <img class="card-img-top" src="./images/Search Location BG.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">01. Search Location</h5>
+                        <p class="card-text">Sign Up in Seconds, Easy payment and Make Trip Available.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="./images/Search Location BG.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">02. Easy Payment</h5>
+                        <p class="card-text">Sign Up in Seconds, Easy payment and Make Trip Available.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="./images/Search Location BG.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">03. Make Trip</h5>
+                        <p class="card-text">Sign Up in Seconds, Easy payment and Make Trip Available.</p>
+                    </div>
+                </div>
+                <!-- </ul>   -->
+            </div>
+
+        </section>
+
+        <!--
+    todo-- 5 section of the page
+  -->
+
+        <section class="section5">
+            <div class="s5left">
+                <img class="s5image" src="./images/We Provide Premium Car.png">
+            </div>
+            <div class="s5right">
+                <p class="s5t1">We Provide Premium Car with high
+                    quality</p>
+                <p class="s5t2">Our company was Built by trust and reputation .We know how to make our customer love us
+                    by our high product with affordable prices. We promise to make you have the interesting experience.
+                </p>
+                <p class="s5t3">CERTIFICATED BY GURUS </p>
+            </div>
+        </section>
+
+
+        <!-- 
+    todo-- section 6 of the page
+ -->
+
+        <section class="section6">
+            <div class="s6up">
+                <p class="s6t1">Happy Users</p>
+                <p class="s6t2">Our Happy User, do the steps easily and start feeling your new experience</p>
+            </div>
+
+            <div class="container">
+                
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">   
+                  <!-- Indicators -->
+                  <!-- <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol> -->
+              
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+              
+                    <div class="item active">
+                        <div class="text-center">
+                           
+                            <p class="s6t3">My wife and I ha a great car for rent in 5 dayswith affordable price. They also alled us everyday just to ask how we feel. Nice support,guys </p>
+                            <h3 class="h1">Cris Angela</h3>  
+                            <p class="s6t3">Review via Facebook</p>    
+                          </div>
+                    </div>
+              
+                    <div class="item">
+                        <div class="text-center">
+                           
+                            <p class="s6t3">My wife and I ha a great car for rent in 5 dayswith affordable price. They also alled us everyday just to ask how we feel. Nice support,guys </p>
+                            <h3 class="h1">Cris Angela</h3>  
+                            <p class="s6t3">Review via Facebook</p>    
+                          </div>
+                    </div>
+                  
+                    <div class="item">
+                        <div class="text-center">
+                           
+                            <p class="s6t3">My wife and I ha a great car for rent in 5 dayswith affordable price. They also alled us everyday just to ask how we feel. Nice support,guys </p>
+                            <h3 class="h1">Cris Angela</h3>  
+                            <p class="s6t3">Review via Facebook</p>    
+                          </div>
+                    </div>
+                
+                  </div>
+              
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left arr"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right arr"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+             
+        </section>
+
+
+        <!-- 
+    todo-- section 7 of the page
+ -->
+
+        <section class="section7">
+            <p class="s7t1">Call For <span class="s7t4">Registration</span></p>
+            <p class="s7t2">we offer you best experience in the city </p>
+            <p class="s7t3">+91 123 456 789 </p>
+        </section>
+
+
+        <!-- 
+    todo-- section 8 footer of the page
+ -->
+
+        <footer class="section8">
+            <div class="s8up">
+                <div class="s8col">
+                    <img src="./images/Footer Car.png" alt="" class="s8col1image">
+                </div>
+                <div class="s8col">
+                    <p class="s8col2heading">Sitemap</p>
+                    <div class="s2col2menu">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Car List</a>
+                        <a href="#">Why choose us</a>
+                        <a href="#">Featured car</a>
+                    </div>
+                </div>
+                <div class="s8col">
+                    <p class="s8col2heading">Support</p>
+                    <div class="s2col2menu">
+                        <a href="#">Contact us</a>
+                        <a href="#">Sign In</a>
+                        <a href="#">Help</a>
+                        <a href="#">Terms and condition</a>
+                    </div>
+                </div>
+                <div class="s8col">
+                    <p class="s8col2heading">Address</p>
+                    <div class="s2col2menu">
+
+                        <a href="#">4263 Heavner Court,Pato, lowa-50217+00 123 456 789</a>
+                        <a href="#">Contact@site.com</a>
+
+                    </div>
+                </div>
+                <form>
+                    <div class="s8col5">
+                        <div class="s8col5part1">
+                            <p class="s8col5heading">Sign Up for newsletter </p>
+
+                        </div>
+                        <div class="s8col5part2">
+                            <input class="footerinput" id="email" for="email" type="email"
+                                placeholder=" 📧 Enter email.." name="email">
+                            <button class="footersubmit" type="button" onclick="saveemail()"><i
+                                    class="bi bi-send-check " style="font-size: 2.2rem;"></i></button>
+                        </div>
+                        <div class="s8col5part3">
+                            <ul>
+                                <a href="facebook.com"> <i class="bi bi-facebook "
+                                        style="font-size: 2rem; margin-right: 2rem;"></i></a>
+
+                                <a href="instagram.com"> <i class="bi bi-instagram"
+                                        style="font-size: 2rem; margin-right: 2rem;"></i></a>
+
+                                <a href="twitter.com"><i class="bi bi-twitter"
+                                        style="font-size: 2rem;margin-right: 2rem;"></i> </a>
+
+                                <a href="youtube.com"> <i class="bi bi-youtube"
+                                        style="font-size: 2rem;margin-right: 2rem;"></i></a>
+
+
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+            </div>
+            </form>
+            <div class="s8down">
+                <p class="s8dt1">Rent<span class="s8dt2">co</span></p>
+                <p class="s8dt3">© 2018 all rights reserved</p>
+            </div>
+        </footer>
+
+
+
+    </div>
+
+
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
